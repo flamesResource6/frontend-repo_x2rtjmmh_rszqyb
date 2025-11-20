@@ -1,14 +1,17 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Features from './components/Features'
 import Marketplace from './components/Marketplace'
 import SubmitForm from './components/SubmitForm'
 import ActivityFeed from './components/ActivityFeed'
+import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 
 function Home() {
   return (
     <>
       <Hero />
+      <Features />
       <Marketplace />
     </>
   )
@@ -27,7 +30,7 @@ function App() {
           <Route path="/activity" element={<ActivityFeed />} />
         </Routes>
       </main>
-      <footer className="py-10 text-center text-blue-300/70">© {new Date().getFullYear()} Intel Replica</footer>
+      <Footer />
     </div>
   )
 }

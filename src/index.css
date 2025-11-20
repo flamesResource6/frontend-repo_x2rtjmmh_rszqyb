@@ -15,32 +15,23 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    color-scheme: dark;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-slate-950 text-blue-100;
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
-@layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
+/* Subtle card style */
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent;
   }
+}
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
-  }
+/* Custom utility classes */
+@layer utilities {
+  .animate-in { animation-name: animateIn; animation-duration: 350ms; }
+  .animate-out { animation-name: animateOut; animation-duration: 350ms; }
 }
